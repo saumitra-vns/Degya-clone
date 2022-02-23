@@ -1,5 +1,5 @@
 function navbar(){
-    return`<div id="nav">
+    return`<div id="nav" class="Header">
     <div id="uper">
         <div id="upperleft">
             <div>
