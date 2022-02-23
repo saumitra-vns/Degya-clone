@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <div id="container1"></div>
@@ -22,7 +23,7 @@
             <input type="button" class="eosh-btn " value="Send Code" id="sign-in-button">
         </div>
         
-        <div id="reg"><h2>Register</h2></div>
+        <div id="slt"><h2>Login</h2></div>
         <div id="con">
              <a href="https://www.facebook.com/"><img id="mac" src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-icon-file-facebook-icon-svg-wikimedia-commons-4.png" alt=""></a>
             <a  href="https://www.facebook.com/"> Sign in with facebook</a>
@@ -46,10 +47,11 @@
        
         <button type="submit" class="Button">Login</button>
        </form>
+       <h5 id="slt">You don't have a Account ? <a href="">Create one</a></h5>
 
        
     </div>
-   
+    <div id="footer"></div>
 
 </body>
 </html>
@@ -60,5 +62,8 @@
     import country_code from '/Data.js'
     let country_div=document.getElementById("country-code");
     country_div.innerHTML=country_code()
+    import footer from '/footer.js'
+    let footer_div=document.getElementById("footer");
+    footer_div.innerHTML=footer()
 </script>
 <!--  -->
