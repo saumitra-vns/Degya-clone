@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deyga All Product</title>
+    <style>
+        img{
+            width: 100%;
+        }
+        #bestseller{
+            text-align: center;
+            font-weight: 700;
+            margin: 15px auto;
+        }
+        #product{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+            text-align: center;
+        }
+        #box>img{
+            border-radius: 15PX;
+        }
+        button{
+            padding: 7px;
+            border-radius: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            width: 150px;
+            border: 1px solid black;
+            background: local;
+        }
+    </style>
+    <link rel="stylesheet" href="/navbar.css">
+</head>
+<body>
+    <div id="importnav">
+
+    </div>
+
+    <div>
+        <p id="bestseller">Best Sellers</p>
+        <div><img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_x600.jpg?v=1641553246%20600w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_800x.jpg?v=1641553246%20800w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_1200x.jpg?v=1641553246%201200w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_1400x.jpg?v=1641553246%201400w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_1600x.jpg?v=1641553246%201600w" alt=""></div>
+    </div>
+    <div>
+
+    </div>
+    <hr>
+    <div id="product">
+
+    </div>
+</body>
+</html>
+<script type="module">
+     import navbar from '/navbar.js'
+
+let nav=document.getElementById("importnav");
+nav.innerHTML=navbar();
+   var Allproduct=[
+        {
+            img: "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/FACE_20__20BODY_20EXFOLIATOR_20100ML_400x.jpg?v=1641031466",
+            name:"Hair Growth Oil",
+            price: 598,
+
+
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0002_undereye_400x.jpg?v=1641464118",
+            name:"Under Eye Cream",
+            price:480,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0003_Beetroot_07aa7e6f-c52b-42d1-8839-a4678e5b2ef3_600x.jpg?v=1641838454",
+            name:"Beetroot Lip Balm",
+            price:250,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0007_aloevera_904x1156_f2a4eefb-0fc7-4420-a666-89b59c8fe39e_400x.jpg?v=1642616492",
+            name:"Aloe Vera Gel",
+            price:390,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0001_Charcoal_400x.jpg?v=1641031433",
+            name:"Charcoal Bath Bar",
+            price:410,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0000_Rose_400x.jpg?v=1641031595",
+            name:"Rose & Mulethi Skin Brightening Pack",
+            price:550,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitled-11_400x.jpg?v=1641111206",
+            name:"Almond Milk Body Lotion",
+            price:400,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0004_beautyfying_400x.jpg?v=1641031411",
+            name:"Beautifying Serum",
+            price:730,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0006_Rose_400x.jpg?v=1641031609",
+            name:"Rose Water Toner",
+            price:490,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5711_400x.jpg?v=1641468153",
+            name:"Under Eye Mask",
+            price:550,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6942_400x.jpg?v=1641031640",
+            name:"Strawberry Lip Scrub",
+            price:410,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5055_400x.jpg?v=1641031662",
+            name:"Tea Tree Facial Toner",
+            price:490,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/FACE_20__20BODY_20EXFOLIATOR_20100ML_400x.jpg?v=1641031466",
+            name:"Face & Body Exfoliator",
+            price:450,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0007_aloevera_904x1156_f2a4eefb-0fc7-4420-a666-89b59c8fe39e_400x.jpg?v=1642616492",
+            name:"Aloe Vera Gel",
+            price:390,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0003_Beetroot_07aa7e6f-c52b-42d1-8839-a4678e5b2ef3_600x.jpg?v=1641838454",
+            name:"Beetroot Lip Balm",
+            price:250,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0007_aloevera_904x1156_f2a4eefb-0fc7-4420-a666-89b59c8fe39e_400x.jpg?v=1642616492",
+            name:"Aloe Vera Gel",
+            price:390,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0001_Charcoal_400x.jpg?v=1641031433",
+            name:"Charcoal Bath Bar",
+            price:410,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0000_Rose_400x.jpg?v=1641031595",
+            name:"Rose & Mulethi Skin Brightening Pack",
+            price:550,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0001_Charcoal_400x.jpg?v=1641031433",
+            name:"Charcoal Bath Bar",
+            price:410,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0000_Rose_400x.jpg?v=1641031595",
+            name:"Rose & Mulethi Skin Brightening Pack",
+            price:550,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitled-11_400x.jpg?v=1641111206",
+            name:"Almond Milk Body Lotion",
+            price:400,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5711_400x.jpg?v=1641468153",
+            name:"Under Eye Mask",
+            price:550,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6942_400x.jpg?v=1641031640",
+            name:"Strawberry Lip Scrub",
+            price:410,
+        }
+    
+    ];
+
+    function appenditem(Allproduct){
+
+        Allproduct.map(element => {
+            
+          let div=document.createElement("div");
+          div.id="box";
+
+          let img=document.createElement("img");
+          img.src=element.img;
+
+          let name=document.createElement('p');
+          name.textContent=element.name;
+
+          let price= document.createElement("p");
+          price.textContent=`MRP ₹${element.price}.00`;
+
+          let addtocart=document.createElement("button");
+          addtocart.textContent="Add To Cart";
+
+
+
+          div.append(img,name,price,addtocart)
+          document.getElementById("product").append(div);
+        });
+    }
+    appenditem(Allproduct);
+</script>
