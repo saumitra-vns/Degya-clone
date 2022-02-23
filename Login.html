@@ -37,7 +37,7 @@
         
         <fieldset class="Form-Input">
           <legend>Email</legend>
-          <input type="email" id="inp"  placeholder="Email">
+          <input type="email" id="inps"  placeholder="Email">
         </fieldset>
         <fieldset  class="Form-Input">
             <legend>Password</legend>
@@ -47,7 +47,7 @@
        
         <button type="submit" class="Button">Login</button>
        </form>
-       <h5 id="slt">You don't have a Account ? <a href="">Create one</a></h5>
+       <h5 id="slt">You don't have a Account ? <a href="SignUp.html">Create one</a></h5>
 
        
     </div>
@@ -55,15 +55,7 @@
 
 </body>
 </html>
-<script type="module">
-    import navbar from '/navbar.js'
-    let navbar_div=document.getElementById("navbar");
-    navbar_div.innerHTML=navbar()
-    import country_code from '/Data.js'
-    let country_div=document.getElementById("country-code");
-    country_div.innerHTML=country_code()
-    import footer from '/footer.js'
-    let footer_div=document.getElementById("footer");
-    footer_div.innerHTML=footer()
+<script type="module" src="./login.js">
+   
 </script>
 <!--  -->

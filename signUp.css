@@ -144,6 +144,15 @@
   
     
 }
+#inps{
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    overflow: hidden;
+  
+    
+}
 .Form-Input{
     display: block;
     padding: 10px 14px;

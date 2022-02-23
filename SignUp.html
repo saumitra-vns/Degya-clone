@@ -34,11 +34,11 @@
        </div>
        <h5 id="slt">Please fill in the information below:</h5>
        <form action="">
-        <input type="text" class="Form__Input" placeholder="First Name ">
-        <input type="text" class="Form__Input" placeholder="Last Name">
-        <input type="email" class="Form__Input" placeholder="Email">
-        <input type="password" class="Form__Input" placeholder="Password">
-        <button type="submit" class="Button">Create My Account</button>
+        <input type="text" class="Form__Input" placeholder="First Name" id="first">
+        <input type="text" class="Form__Input" placeholder="Last Name" id="last">
+        <input type="email" class="Form__Input" placeholder="Email" id="eml">
+        <input type="password" class="Form__Input" placeholder="Password" id="pass">
+        <button type="submit" class="Button" >Create My Account</button>
        </form>
 
        
@@ -47,15 +47,5 @@
 
 </body>
 </html>
-<script type="module">
-    import navbar from '/navbar.js'
-    let navbar_div=document.getElementById("navbar");
-    navbar_div.innerHTML=navbar()
-    import country_code from '/Data.js'
-    import footer from '/footer.js'
-    let country_div=document.getElementById("country-code");
-    country_div.innerHTML=country_code()
-    let footer_div=document.getElementById("footer");
-    footer_div.innerHTML=footer()
-</script>
+<script type="module" src="./SignUp.js"></script>
 <!--  -->

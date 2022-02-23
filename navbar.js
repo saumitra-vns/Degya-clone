@@ -35,6 +35,8 @@ function navbar(){
                     <option value=""> logOut</option>
                 </select>
             </div>
+            <div id="show"><h5></h5>
+            </div>
             <div>
                 <div id="cartcount">Cart()</div>
            
