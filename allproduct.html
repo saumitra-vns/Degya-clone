@@ -19,18 +19,50 @@
             grid-template-columns: repeat(4,1fr);
             gap:20px;
             text-align: center;
+            margin: 10px;
+        }
+        #box{
+            padding: 10px;
+            border-radius: 8px;
+           
+        }
+        #box:hover{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         }
         #box>img{
-            border-radius: 15PX;
+            border-radius: 8PX;
         }
         button{
             padding: 7px;
             border-radius: 15px;
             font-size: 15px;
             font-weight: bold;
-            width: 150px;
+            width: 120px;
             border: 1px solid black;
             background: local;
+        }
+        #sortsection{
+            display: flex;
+            height: 50px;
+        }  
+        #left{
+            width: 90%;
+        }
+        #right{
+            /* border: 2px solid green; */
+            border-left: 1px solid rgb(78, 78, 78);
+            text-align: center;
+            padding-top: 16px;
+            width: 10%;
+            
+        }
+        #sort{
+            border: none;
+            margin: auto;
+            justify-content: center;
+            font-size:medium;
+            color: rgb(122, 122, 122);
+            text-align: center;
         }
     </style>
     <link rel="stylesheet" href="/navbar.css">
@@ -44,15 +76,25 @@
         <p id="bestseller">Best Sellers</p>
         <div><img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_x600.jpg?v=1641553246%20600w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_800x.jpg?v=1641553246%20800w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_1200x.jpg?v=1641553246%201200w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_1400x.jpg?v=1641553246%201400w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Collection_Banners-04_1600x.jpg?v=1641553246%201600w" alt=""></div>
     </div>
-    <div>
+    <div id="sortsection">
+        <div id="left"></div>
+        <div id="right">
+           <select name="filter" id="filterButton" onchange="filterProducts()">
+               <option value="">sort</option>
+               <option value="A-Z">Alphabetically, A-Z</option>
+               <option value="Z-A">Alphabetically, Z-A</option>
+               <option value="LTH">Price low to high</option>
+               <option value="HTL">Price high to low</option>
 
+           </select>
+           
+        </div>
     </div>
     <hr>
     <div id="product">
 
     </div>
-</body>
-</html>
+
 <script type="module">
      import navbar from '/navbar.js'
 
@@ -115,6 +157,11 @@ nav.innerHTML=navbar();
             img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6942_400x.jpg?v=1641031640",
             name:"Strawberry Lip Scrub",
             price:410,
+        },
+        {
+            img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/904_0003_Beetroot_07aa7e6f-c52b-42d1-8839-a4678e5b2ef3_600x.jpg?v=1641838454",
+            name:"Beetroot Lip Balm",
+            price:250,
         },
         {
             img:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5055_400x.jpg?v=1641031662",
@@ -205,4 +252,15 @@ nav.innerHTML=navbar();
         });
     }
     appenditem(Allproduct);
+
+     function filterProducts(){
+
+        let filtercaiteria=document.getElementById('filterButton').value;
+        console.log(filtercaiteria)
+
+    }
+
 </script>
+
+</body>
+</html>
