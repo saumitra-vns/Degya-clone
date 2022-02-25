@@ -29,7 +29,8 @@ function navbar(){
             </div>
             <div>
                 <select name="" id="Account">
-                    <option value="account"> Account</option>
+                    <option value="">Account</option>
+                    <option value="account"> login</option>
                     <option value="wishlist"> Wishlist</option>
                     <option value="trackorder"> Track Order</option>
                     <option value="logout"> logOut</option>
@@ -43,7 +44,7 @@ function navbar(){
         
     </div>
     <div id="lower">
-        <div><a href="https://www.google.com">Skin Care</a></div>
+        <div><a href="skincare.html">Skin Care</a></div>
         <div><a href="https://www.google.com">Hair Care</a></div>
         <div><a href="https://www.google.com">Bath & Body</a></div>
         <div><a href="https://www.google.com">Oral Care</a></div>

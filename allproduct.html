@@ -69,7 +69,63 @@
 </head>
 <body>
     <div id="importnav">
-
+        <div id="nav">
+            <div id="uper">
+                <div id="upperleft">
+                    <div>
+                        <select name="" id="">
+                            <option value="">IND </option>
+                            <option value="">USD </option>
+                            <option value="">GPB </option>
+                            <option value="">CAD </option>
+                            <option value="">JPY </option>
+                            <option value="">AUD </option>
+                        </select>
+                    </div>
+                    <div>
+                        Blogs
+                    </div>
+                    <div>Ingredients</div>
+                </div>
+        
+                <div id="uppermid">
+                    <!-- <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/files/200x150-01_140x@2x.png?v=1640868807" alt=""> -->
+                    <h1>Deyga</h1>
+                </div>
+        
+                <div id="upperright">
+                    <div>
+                        <input type="text" id="searchitem" placeholder=" SEARCH  PRODUCTS">
+                    </div>
+                    <div>
+                        <select name="" id="Account">
+                            <option value="">Account</option>
+                            <option value="account"> login</option>
+                            <option value="wishlist"> Wishlist</option>
+                            <option value="trackorder"> Track Order</option>
+                            <option value="logout"> logOut</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div id="cartcount">Cart()</div>
+                   
+                    </div>
+                </div>
+                
+            </div>
+            <div id="lower">
+                <div><a href="skincare.html">Skin Care</a></div>
+                <div><a href="https://www.google.com">Hair Care</a></div>
+                <div><a href="https://www.google.com">Bath & Body</a></div>
+                <div><a href="https://www.google.com">Oral Care</a></div>
+                <div><a href="https://www.google.com">Wellness</a></div>
+                <div><a href="https://www.google.com">Baby Care</a></div>
+                <div><a href="https://www.google.com">Men</a></div>
+                <div><a href="https://www.google.com">Combo</a></div>
+                <div><a href="https://www.google.com">Gifting</a></div>
+                <div><a href="https://www.google.com">Offers</a></div>
+            </div>
+        </div>
     </div>
 
     <div>
@@ -79,14 +135,12 @@
     <div id="sortsection">
         <div id="left"></div>
         <div id="right">
-           <select name="filter" id="filterButton" >
-               <option value="">sort</option>
-               <option value="A-Z">Alphabetically, A-Z</option>
-               <option value="Z-A">Alphabetically, Z-A</option>
-               <option value="LTH">Price low to high</option>
-               <option value="HTL">Price high to low</option>
-
-           </select>
+          
+            <select name="" id="sortbutton" onchange="sort()">
+                <option value="">sort</option>
+                <option value="LTH">Price low to high</option>
+                <option value="HTL">Price high to low</option>
+            </select>
            
         </div>
     </div>
@@ -94,12 +148,16 @@
     <div id="product">
 
     </div>
+    <!-- <script type="module">
+    
+     import navbar from './navbar.js'
+    
+    let nav=document.getElementById("importnav");
+    nav.innerHTML=navbar();
 
-<script type="module" >
-     import navbar from '/navbar.js'
+    </script> -->
 
-let nav=document.getElementById("importnav");
-nav.innerHTML=navbar();
+<script>
    var Allproduct=[
         {
             img: "https://cdn.shopify.com/s/files/1/0034/7901/1441/products/FACE_20__20BODY_20EXFOLIATOR_20100ML_400x.jpg?v=1641031466",
@@ -226,7 +284,28 @@ nav.innerHTML=navbar();
     
     ];
 
+
+    function sort(){
+        let option =document.querySelector("#sortbutton").value;
+
+        if(option==="LTH"){
+            Allproduct.sort(function(a,b){
+                return a.price-b.price
+            })
+        }
+        if(option==="HTL"){
+            Allproduct.sort(function(a,b){
+                return b.price-a.price
+            })
+        }
+        appenditem(Allproduct);
+        console.log(Allproduct);
+    }
+
+//   -------------------------------------------------------------------------------------------------------------------------
+
     function appenditem(Allproduct){
+        document.getElementById("product").innerHTML="";
 
         Allproduct.map(element => {
             
@@ -244,30 +323,97 @@ nav.innerHTML=navbar();
 
           let addtocart=document.createElement("button");
           addtocart.textContent="Add To Cart";
-          addtocart.onclick=()=>{
-              function Addtocart(element)
-          }
+        addtocart.onclick=function(event){
+                  
+                   addtocart1(element);
+               };
+
+               function addtocart1(element){
+
+                   let  cart=JSON.parse(localStorage.getItem("cart")) ||[];
+                   cart.push(element);
 
 
+                   localStorage.setItem("cart",(JSON.stringify(cart)));
+                   
+                    updatecartcount(cart);  
+               }
 
           div.append(img,name,price,addtocart)
+               
           document.getElementById("product").append(div);
+       
         });
-    }
-    function Addtocart(element){
+    };
 
-    }
-    
     appenditem(Allproduct);
+ //---------------------------------------------
 
     
-     function filterProducts(){
+
+    // function addtocart1(element){
         
-        let filtercaiteria=document.getElementById('filterButton').value;
-        console.log(filtercaiteria)
+    //                let itemlist=JSON.parse(localStorage.getItem("cartitem")) ||[];
+    //                itemlist.push(item);
+    //                localStorage.setItem("cartitem",(JSON.stringify(itemlist)));
+    //                console.log(itemlist);
+    //                 updatecartcount(itemlist);               
+    // }
+    
+   
 
+    let cart=JSON.parse(localStorage.getItem("cart"));
+    
+   
+    if(!cart){
+        cart=[];
+        localStorage.setItem("cart",JSON.stringify(cart));
+        updatecartcount(cart);
+
+    }else{
+        // cart=JSON.parse(cart);
+        updatecartcount(cart);
+             
     }
+   function updatecartcount(cart){
+        let cartcount=document.getElementById("cartcount");
+        cartcount.textContent="Cart"+" "+cart.length;
+    } 
+       
+    //   function sort(){
+    //     let data=Allproduct;
+    //     let filtercaiteria=document.getElementById('sortbutton').value;
+    //     console.log(filtercaiteria);
+    //     if(filtercaiteria){
+    //         let updatelist=data.sort(function(a,b){
+    //             if(filtercaiteria==="A-Z"){
+    //                 if(a.name>b.name){
+    //                     return -1;
+    //                 }
+    //                 return 0;
+    //             }else if(filtercaiteria==="Z-A"){
+    //                 if(a.name<b.name){
+    //                     return 1;
+    //                 }
+    //                 return 0;
+    //             }else if(filtercaiteria==="LTA"){
+    //                 return(b.price-a.price)
+    //             }else if(filtercaiteria==="LTH"){
+    //                 return(a.price-b.price)
+    //             }
 
+    //         });
+    //         appenditem(updatelist);
+    //     }
+
+    //    }
+    // sort(Allproduct);
+
+    // let accountchange=document.getElementById("Account");
+    // accountchange.onchange()=>{
+    //     let accountvalue=document.getElementById("Account").value;
+    //     console.log(accountvalue);
+    // })
 </script>
 
 </body>
