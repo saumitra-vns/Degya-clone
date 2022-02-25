@@ -5,9 +5,10 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin: 0px;
   width: 100%;
-  position: relative;
-}
+  position: fixed;
+  background-color: white;
 
+}
 #nav:hover {
   background-color: white;
 }
@@ -69,3 +70,4 @@ body {
   font-weight: 400;
   margin: 0;
 }
+
