@@ -140,6 +140,8 @@
                 <option value="">sort</option>
                 <option value="LTH">Price low to high</option>
                 <option value="HTL">Price high to low</option>
+                <option value="az">Alphabetically,A-Z</option>
+                <option value="za">Alphabetically,Z-A</option>
             </select>
            
         </div>
@@ -296,6 +298,20 @@
         if(option==="HTL"){
             Allproduct.sort(function(a,b){
                 return b.price-a.price
+            })
+        }
+        if(option==="az"){
+            Allproduct.sort(function(a,b){
+                if(a.name>b.name) return 1;
+                if(a.name<b.name) return -1;
+                return 0;
+            })
+        }
+        if(option==="za"){
+            Allproduct.sort(function(a,b){
+                if(a.name>b.name) return -1;
+                if(a.name<b.name) return 1;
+                return 0;
             })
         }
         appenditem(Allproduct);
