@@ -43,16 +43,16 @@ function navbar(){
         
     </div>
     <div id="lower">
-        <div>Skin Care</div>
-        <div>Hair Care</div>
-        <div>Bath & Body</div>
-        <div>Oral Care</div>
-        <div>Wellness</div>
-        <div>Baby Care</div>
-        <div>Men</div>
-        <div>Combo</div>
-        <div>Gifting</div>
-        <div>Offers</div>
+    <div><a style="color: black; text-decoration: none;" href="skincare.html">Skin Care</a></div>
+    <div><a style="color: black; text-decoration: none;" href="haircare.html">Hair Care</a></div>
+    <div><a style="color: black; text-decoration: none;" href="bath&body.html">Bath & Body</a></div>
+    <div><a style="color: black; text-decoration: none;" href="oralcare.html">Oral Care</a></div>
+    <div><a style="color: black; text-decoration: none;" href="wellness.html">Wellness</a></div>
+    <div><a style="color: black; text-decoration: none;" href="babycare.html">Baby Care</a></div>
+    <div><a style="color: black; text-decoration: none;"  href="men.html">Men</a></div>
+    <div><a style="color: black; text-decoration: none;" href="https://www.google.com">Combo</a></div>
+    <div><a style="color: black; text-decoration: none;" href="https://www.google.com">Gifting</a></div>
+    <div><a style="color: black; text-decoration: none;" href="https://www.google.com">Offers</a></div>
     </div>
 </div>`
 }
