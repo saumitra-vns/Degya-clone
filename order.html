@@ -14,6 +14,7 @@
                 <div id="bx"><h1>D</h1></div>
                 <div><h3>Deygaorganics</h3></div>
             </div>
+            <div ><h3 id="total"></h3></div>
         </div>
         <div id="footer">
             <div id="sidebar">
@@ -28,7 +29,7 @@
             <input type="text"  class="inp" placeholder="Card Holder Name">
             <div id="mac">
                 <input type="text" placeholder="MM/YY" class="mik">
-                <input type="text" name="" id="" placeholder="CCV" class="mik">
+                <input type="number" name="" id="" placeholder="CCV" class="mik">
                 
             </div>
           <div id="cheaks">  
@@ -37,7 +38,7 @@
        
             </div>
 
-            <button class="inp" id="btn">Pay Now</button>
+            <button class="inp" id="btn" onclick="window.location.href='Otp.html'">Pay Now</button>
             
         <div>
          <img src="https://payments.cashfree.com/order/cards-strip.png" alt=""></div>
@@ -52,5 +53,10 @@
     </div>
 </body>
 </html>
+<script>
+    let lasttotal=JSON.parse(localStorage.getItem("disAmount"));
+
+    document.getElementById("total").textContent=`Amount to Pay ₹ ${lasttotal}`;
+</script>
 
 
