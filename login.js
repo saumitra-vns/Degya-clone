@@ -33,8 +33,9 @@ function log(event){
         let show=document.getElementById("show");
         show.textContent=first;
         dataArr.push(first,email)
-       localStorage.setItem("regUsers",JSON.stringify(dataArr))
-        // window.location.href="Login.html";
+       localStorage.setItem("regUsers",JSON.stringify(dataArr));
+       alert("login Success.");
+        window.location.href="allproduct.html";
     }
     else{
        alert("Your email or passworrd was incorrect")
