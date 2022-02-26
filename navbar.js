@@ -1,5 +1,5 @@
 function navbar(){
-    return`<div id="nav">
+    return`<div id="nav" class="Header">
     <div id="uper">
         <div id="upperleft">
             <div>
@@ -35,6 +35,8 @@ function navbar(){
                     <option value="trackorder"> Track Order</option>
                     <option value="logout"> logOut</option>
                 </select>
+            </div>
+            <div id="show"><h5></h5>
             </div>
             <div>
                 <div id="cartcount">Cart()</div>
