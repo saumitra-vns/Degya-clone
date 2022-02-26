@@ -7,11 +7,13 @@
     <title>Document</title>
    
     <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="navbar.css">
    
     <script src="homepage.js"></script>
   </head>
   <body>
     <div id="container">
+      <div id="importnav"></div>
       <div id="video-div">
         <video playsinline="" muted="" autoplay="" width="100%" controls="">
           <source
@@ -445,7 +447,12 @@ function changeImg(){
 window.onload=changeImg;
 </script>
 
-
+<script type="module">
+  import navbar from '/navbar.js'
+  
+  let nav=document.getElementById("importnav");
+  nav.innerHTML=navbar();
+</script>
 
 
 
