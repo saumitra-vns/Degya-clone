@@ -102,7 +102,7 @@
                         <input type="text" id="searchitem" placeholder=" SEARCH  PRODUCTS">
                     </div>
                     <div>
-                        <select name="" id="Account">
+                        <select name="" id="Account" onchange="changepage()">  
                             <option value="">Account</option>
                             <option value="account"> login</option>
                             <option value="wishlist"> Wishlist</option>
@@ -291,7 +291,12 @@
         }
     
     ];
-
+    function changepage(){
+        let option=document.getElementById("Account").value;
+        if(option==="account"){
+            window.location.href="skincare.html";
+        }
+    }
 
     function sort(){
         let option =document.querySelector("#sortbutton").value;
