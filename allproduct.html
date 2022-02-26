@@ -69,6 +69,55 @@
             padding: 25px;
             font-size: 11px;
         }
+        #main-cont {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+#logos {
+  display: grid;
+  margin-left: 40%;
+  grid-template-columns: repeat(5, 60px);
+  grid-gap: 8px;
+}
+#foot {
+  display: grid;
+  width: 50%;
+  margin: auto;
+  grid-template-columns: repeat(3, 300px);
+  font-family: sans-serif;
+  color: rgb(59, 92, 121);
+}
+#input-text {
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+#f-btn {
+  width: 140px;
+  height: 50px;
+  margin: 20px;
+  padding: 15px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 10px;
+}
+#last-logos {
+  display: flex;
+  margin-left: 10%;
+  gap: 10px;
+}
+#last-f {
+  font-family: sans-serif;
+  font-size: 15px;
+  width: 80%;
+  margin: auto;
+  color: rgb(58, 44, 25);
+}
     </style>
     <link rel="stylesheet" href="/navbar.css">
 </head>
@@ -112,7 +161,7 @@
                         </select>
                     </div>
                     <div>
-                        <div id="cartcount">Cart()</div>
+                        <a href="https://www.google.com"><div id="cartcount">Cart()</div></a>
                    
                     </div>
                 </div>
@@ -120,12 +169,12 @@
             </div>
             <div id="lower">
                 <div><a href="skincare.html">Skin Care</a></div>
-                <div><a href="https://www.google.com">Hair Care</a></div>
-                <div><a href="https://www.google.com">Bath & Body</a></div>
-                <div><a href="https://www.google.com">Oral Care</a></div>
-                <div><a href="https://www.google.com">Wellness</a></div>
-                <div><a href="https://www.google.com">Baby Care</a></div>
-                <div><a href="https://www.google.com">Men</a></div>
+                <div><a href="haircare.html">Hair Care</a></div>
+                <div><a href="bath&body.html">Bath & Body</a></div>
+                <div><a href="oralcare.html">Oral Care</a></div>
+                <div><a href="wellness.html">Wellness</a></div>
+                <div><a href="babycare.html">Baby Care</a></div>
+                <div><a href="men.html">Men</a></div>
                 <div><a href="https://www.google.com">Combo</a></div>
                 <div><a href="https://www.google.com">Gifting</a></div>
                 <div><a href="https://www.google.com">Offers</a></div>
@@ -157,14 +206,16 @@
     <div id="product">
 
     </div>
-    <!-- <script type="module">
+    <hr>
+    <div id="main-countainer"></div>
+    <script type="module">
+        import footer from "./homepage.js";
+        let sidebar_div = document.getElementById("main-countainer");
+      
+        
+        sidebar_div.innerHTML = footer();
+      </script>
     
-     import navbar from './navbar.js'
-    
-    let nav=document.getElementById("importnav");
-    nav.innerHTML=navbar();
-
-    </script> -->
 
 <script>
    var Allproduct=[
@@ -408,7 +459,7 @@
     }
    function updatecartcount(cart){
         let cartcount=document.getElementById("cartcount");
-        cartcount.textContent="Cart"+" "+cart.length;
+        cartcount.textContent="Cart ("+cart.length+")";
     } 
        
     //   function sort(){
