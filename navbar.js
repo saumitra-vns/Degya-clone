@@ -47,12 +47,12 @@ function navbar(){
     </div>
     <div id="lower">
         <div><a href="skincare.html">Skin Care</a></div>
-        <div><a href="https://www.google.com">Hair Care</a></div>
-        <div><a href="https://www.google.com">Bath & Body</a></div>
-        <div><a href="https://www.google.com">Oral Care</a></div>
-        <div><a href="https://www.google.com">Wellness</a></div>
-        <div><a href="https://www.google.com">Baby Care</a></div>
-        <div><a href="https://www.google.com">Men</a></div>
+        <div><a href="haircare.html">Hair Care</a></div>
+        <div><a href="bath&body.html">Bath & Body</a></div>
+        <div><a href="oralcare.html">Oral Care</a></div>
+        <div><a href="wellness.html">Wellness</a></div>
+        <div><a href="babycare.html">Baby Care</a></div>
+        <div><a href="men.html">Men</a></div>
         <div><a href="https://www.google.com">Combo</a></div>
         <div><a href="https://www.google.com">Gifting</a></div>
         <div><a href="https://www.google.com">Offers</a></div>
