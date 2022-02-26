@@ -30,6 +30,10 @@ h1 {
   color: rgb(86, 10, 11);
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 input,
 select {
   border: none;
@@ -66,7 +70,7 @@ select {
 }
 body {
   /* background-color: red; */
-  font-family: "Barlow", sans-serif !important;
+  font-family: sans-serif;
   font-weight: 400;
   margin: 0;
 }

@@ -29,10 +29,11 @@ function navbar(){
             </div>
             <div>
                 <select name="" id="Account">
-                    <option value=""> Account</option>
-                    <option value=""> Wishlist</option>
-                    <option value=""> Track Order</option>
-                    <option value=""> logOut</option>
+                    <option value="">Account</option>
+                    <option value="account"> login</option>
+                    <option value="wishlist"> Wishlist</option>
+                    <option value="trackorder"> Track Order</option>
+                    <option value="logout"> logOut</option>
                 </select>
             </div>
             <div id="show"><h5></h5>
@@ -45,16 +46,16 @@ function navbar(){
         
     </div>
     <div id="lower">
-        <div>Skin Care</div>
-        <div>Hair Care</div>
-        <div>Bath & Body</div>
-        <div>Oral Care</div>
-        <div>Wellness</div>
-        <div>Baby Care</div>
-        <div>Men</div>
-        <div>Combo</div>
-        <div>Gifting</div>
-        <div>Offers</div>
+        <div><a href="skincare.html">Skin Care</a></div>
+        <div><a href="https://www.google.com">Hair Care</a></div>
+        <div><a href="https://www.google.com">Bath & Body</a></div>
+        <div><a href="https://www.google.com">Oral Care</a></div>
+        <div><a href="https://www.google.com">Wellness</a></div>
+        <div><a href="https://www.google.com">Baby Care</a></div>
+        <div><a href="https://www.google.com">Men</a></div>
+        <div><a href="https://www.google.com">Combo</a></div>
+        <div><a href="https://www.google.com">Gifting</a></div>
+        <div><a href="https://www.google.com">Offers</a></div>
     </div>
 </div>`
 }
