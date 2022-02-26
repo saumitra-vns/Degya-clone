@@ -1,52 +1,74 @@
 
 let item=document.getElementById("items");
 let buttonarea= document.getElementById("button");
-let items=JSON.parse( localStorage.getItem("cart"));
-let cartArr=[];
-cartArr.push(items);
+var items =JSON.parse(localStorage.getItem("cart"));
+console.log(items);
 
-if(cartArr.length==0){
+function home(){
+    let len =document.getElementById("cartlength");
+    len.innerHTML=`Total Cart Item -${items.length}`;
+}
+home();
+
+var totalPrice=0;
+
+
+
+if(items.length==0){
     item.innerHTML=`Your Carrt is Empty`;
 }
 
 else{
 
-    let totalPrice=0;
-    cartArr.forEach((element) => {
+    function appenddata(items){
+    item.innerHTML=null;
+    items.forEach((element,index) => {
 
-        totalPrice+=carrArr.price;
+         totalPrice+=(element.price);
 
         let div= document.createElement("div");
 
         let image=document.createElement("img");
-        image.src=element.image;
+        image.src=element.img;
     
         let name= document.createElement("p");
         name.textContent=element.name;
 
         let price= document.createElement("p");
-        price.textContent=element.price;
+        price.textContent=`MRP ₹ ${element.price}`;
 
-        let rem= document.createElement("p");
-        rem.textContent="Remove";
+       let remove =document.createElement("button");
+       remove.textContent="Remove";
+       remove.addEventListener("click",function(){
+        deletetask(index);
         
-        div.append(image,name,price);
+       });
+        
+        div.append(image,name,price,remove);
 
         item.append(div);
     });
 
-   let heading= document.createElement("h3");
-   heading.textContent="Add Oder Note";
-
-   let note= document.createElement("p");
-   note.textContent="Shipping & taxes calculated at checkout";
-
-   let button=document.createElement("button");
-   button.textContent=`Checkout . ₹${totalPrice}`;
-   button.addEventListener("click", go())
-
+  };
+ appenddata(items);
 }
-function go(event){
-    event.preventDefault();
-   window.location.href="information.html";
+
+function deletetask(index){
+    items.splice(index,1);
+    localStorage.setItem("cart",JSON.stringify(items));
+   
+   
+    appenddata(items);
+    window.location.href="cart.html";
 }
+
+
+
+
+let tpdiv=document.getElementById("totalprice");
+tpdiv.textContent=`Total Amount-₹ ${totalPrice}`;
+console.log(totalPrice);
+
+localStorage.setItem("totalAmount",JSON.stringify(totalPrice));
+
+

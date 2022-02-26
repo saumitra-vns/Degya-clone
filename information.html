@@ -72,6 +72,9 @@
             margin: 20px;
         
         }
+        h1{
+            margin-top: 0;
+        }
     </style>
 
 </head>
@@ -110,7 +113,7 @@
                     < Return to cart 
                 </div>
                 <div class="but">
-                    <button onclick="go()">Continue to Shiping</button>
+                    <button onclick="window.location.href='Order.html'">Continue to Shiping</button>
                 </div>    
                
             </div>
@@ -123,7 +126,7 @@
 
             <div id="promo">
                   
-                  <input  id="ele" type="text" placeholder="Gift card or Discount code">  <button id="btn"> Apply</button>
+                  <input  id="ele" type="text" placeholder="Gift card or Discount code">  <button id="btn" onclick="discount()"> Apply</button>
                  
             </div>
             <hr>
@@ -132,7 +135,7 @@
             </div>
 
             <div id="total1">
-                <div id="sub">Shipping </div> <div id="total">Calculated At the next step</div>
+                <div id="sub">Shipping Charge :</div> <div id="total">₹ 30</div>
             </div>
                   <hr>
              <div id="all">
