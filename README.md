@@ -58,7 +58,7 @@ This entire journey of making the project was awesome. We have learned lots of t
 
 - ## <span style="color:blue"> Bill Page</span>
 
- <img width="391" alt="zms footer" src="https://miro.medium.com/max/1400/1*Md1qud1h7i11vbWj9Sn_-w.png">
+ <img width="391" alt="zms footer" src="https://miro.medium.com/max/1400/1*F1rVwueZw6uUb5KPh9FS5Q.png">
  
  
 <br>
